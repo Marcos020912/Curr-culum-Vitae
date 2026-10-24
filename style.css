@@ -655,6 +655,41 @@ h2 .idx {
     box-shadow: 0 3px 10px rgba(29, 78, 216, .5);
 }
 
+/* Botón descargar PDF */
+.pdf-btn {
+    position: fixed;
+    top: 70px;
+    right: 18px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Inter", sans-serif;
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 30px;
+    padding: 9px 17px;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(29, 78, 216, .4);
+    transition: .18s;
+}
+
+.pdf-btn:hover {
+    background: var(--accent-ink);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(29, 78, 216, .5);
+}
+
+.pdf-btn .pdf-ic {
+    font-size: .95rem;
+    line-height: 1;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -679,13 +714,84 @@ h2 .idx {
    IMPRESIÓN (A4)
    ============================================================ */
 @media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
     body {
         background: #fff;
         padding: 0;
         font-size: 11.5px;
     }
 
-    .lang-switcher { display: none !important; }
+    .lang-switcher,
+    .pdf-btn { display: none !important; }
+
+    /* Forzar layout de escritorio aunque el viewport de impresión sea estrecho */
+    html { font-size: 12.5px !important; }
+    .body { grid-template-columns: 1fr 245px !important; }
+    section { margin-bottom: 11px !important; }
+    h2 { margin-bottom: 10px !important; padding-bottom: 6px !important; }
+    .header { padding: 16px 28px 13px !important; }
+    .header-top {
+        flex-direction: row !important;
+        text-align: left !important;
+        align-items: center !important;
+    }
+    .profile-img {
+        width: 76px !important;
+        height: 76px !important;
+        margin: 0 !important;
+        border-width: 3px !important;
+    }
+    .header-title h1 { font-size: 1.45rem !important; }
+    .header .tagline { margin-top: 5px !important; font-size: .9rem !important; }
+    .header-meta { margin-top: 8px !important; padding: 4px 13px !important; }
+    .header .social-links { margin-top: 9px !important; }
+    .header .contact-info { margin-top: 12px !important; padding-top: 11px !important; gap: 9px !important; }
+    .social-links,
+    .contact-info { justify-content: flex-start !important; }
+    .main { padding: 18px 24px 8px 30px !important; }
+    .side {
+        border-left: 1px solid var(--line) !important;
+        border-top: none !important;
+        background: #fff !important;
+        padding: 18px 18px !important;
+    }
+    .info-grid { grid-template-columns: 1fr 1fr !important; }
+    .role { padding: 7px 11px !important; }
+    .role-list { gap: 6px !important; margin-bottom: 10px !important; }
+    .tl-item { padding-bottom: 11px !important; }
+    .tl-body ul.bullets li,
+    .project-item ul.bullets li { line-height: 1.5 !important; margin-bottom: 2px !important; }
+    .tl-body p,
+    .project-item p { line-height: 1.55 !important; }
+    .project-item.featured { padding: 10px 14px !important; }
+    .project-item ul.bullets li { font-size: .82rem !important; line-height: 1.45 !important; }
+    .skill-category { margin-bottom: 12px !important; }
+    .footer { padding: 7px 30px !important; font-size: .68rem !important; }
+    .stack-line { margin-top: 9px !important; padding-top: 8px !important; }
+
+    /* Evitar cortes feos entre páginas */
+    .tl-item,
+    .project-item,
+    .role,
+    .info-card,
+    .skill-category,
+    .langrow,
+    .bar-skill,
+    .group-title {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    h2,
+    h3,
+    .group-title {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
 
     .cv {
         max-width: none;

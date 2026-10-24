@@ -36,7 +36,7 @@
             'loc': 'Passo Fundo, RS — Brazil',
             'tagline': 'Computer Engineer — Backend · Product Owner · Enterprise Agentic AI',
             'h2.about': 'General Information',
-            'about.intro': 'Developer with a multi-role profile focused on three complementary areas: <strong>Backend</strong>, <strong>Product Owner</strong>, and the <strong>implementation of agentic AI systems in enterprise environments</strong>.',
+            'about.intro': 'Multi-role developer focused on <strong>Backend</strong>, <strong>Product Owner</strong>, and the <strong>implementation of agentic AI systems in enterprise environments</strong>. Passionate about the world of technology and artificial intelligence, with a special interest in integrating AI into the application development process in a <strong>secure and scalable</strong> way, and in implementing <strong>agentic systems for business process automation</strong>. I have developed adaptability skills in fast-evolving environments and highly dynamic projects that require flexible and rapidly adaptable work processes.',
             'role.backend': '<b>Backend Development</b>I design and build robust APIs and systems (Java, Spring Boot, Python, Go), focused on security, performance, versioning, and testing.',
             'role.po': '<b>Product Owner</b>I create application prototypes to validate them with users and stakeholders before investing in full development: from idea to validated product.',
             'role.ai': '<b>Agentic AI in Enterprise Environments</b>I implement AI systems in real business processes: agentic workflows, RAG systems, MCP servers, and skills that integrate LLMs into the company.',
@@ -97,13 +97,14 @@
             'lang.en': 'English',
             'lang.en.level': 'Basic',
             'lang.pt': 'Portuguese',
-            'lang.pt.level': 'Minimum'
+            'lang.pt.level': 'Minimum',
+            'btn.pdf': 'Download PDF'
         },
         pt: {
             'loc': 'Passo Fundo, RS — Brasil',
             'tagline': 'Engenheiro Informático — Backend · Product Owner · IA Agêntica Empresarial',
             'h2.about': 'Informações Gerais',
-            'about.intro': 'Desenvolvedor com perfil multi-rol centrado em três áreas complementares: <strong>Backend</strong>, <strong>Product Owner</strong> e <strong>implementação de sistemas de IA agêntica em ambientes empresariais</strong>.',
+            'about.intro': 'Desenvolvedor com perfil multi-rol centrado em <strong>Backend</strong>, <strong>Product Owner</strong> e <strong>implementação de sistemas de IA agêntica em ambientes empresariais</strong>. Apaixonado pelo mundo da tecnologia e da inteligência artificial, com especial interesse em integrar a IA no processo de desenvolvimento de aplicações de forma <strong>segura e escalável</strong>, e na implementação de <strong>sistemas agênticos para a automação de processos empresariais</strong>. Desenvolvi habilidades de adaptabilidade em ambientes de rápida evolução e projetos altamente dinâmicos que exigem processos de trabalho flexíveis e de rápida adaptação.',
             'role.backend': '<b>Backend Development</b>Projeto e construo APIs e sistemas robustos (Java, Spring Boot, Python, Go), com foco em segurança, performance, versionamento e testes.',
             'role.po': '<b>Product Owner</b>Crio protótipos de aplicações para validá-los com usuários e stakeholders antes de investir no desenvolvimento completo: da ideia ao produto validado.',
             'role.ai': '<b>IA Agêntica em Ambientes Empresariais</b>Implemento sistemas de IA em processos reais de negócio: fluxos agênticos, sistemas RAG, servidores MCP e skills que integram LLMs na empresa.',
@@ -164,7 +165,8 @@
             'lang.en': 'Inglês',
             'lang.en.level': 'Básico',
             'lang.pt': 'Português',
-            'lang.pt.level': 'Mínimo'
+            'lang.pt.level': 'Mínimo',
+            'btn.pdf': 'Baixar PDF'
         }
     };
 
@@ -228,6 +230,14 @@
                 });
             })(buttons[i]);
         }
+
+        var pdfBtn = document.getElementById('btn-pdf');
+        if (pdfBtn) {
+            pdfBtn.addEventListener('click', function () {
+                window.print();
+            });
+        }
+
         apply(detect());
     }
 
