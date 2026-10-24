@@ -1,142 +1,324 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum Vitae</title>
+    <title>Currículum Vitae — Marcos Alejandro Fernandez Piñero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <div class="profile-img">
-                <img src="imagen.jpg" alt="Foto de Marcos Alejandro Fernandez Piñero">
-            </div>
-            <h1>Marcos Alejandro Fernandez Piñero</h1>
-            <p class="tagline">Ingeniero Informático - Especialista en Backend y Data Engineering</p>
+    <div class="lang-switcher" role="group" aria-label="Language / Idioma">
+        <button type="button" data-lang="es" class="active">ES</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="pt">PT</button>
+    </div>
+
+    <div class="cv">
+
+        <!-- ============ HEADER ============ -->
+        <header class="header">
+            <div class="header-top">
+                    <div class="profile-img">
+                        <img src="imagen.jpg" alt="Foto de Marcos Alejandro Fernandez Piñero">
+                    </div>
+                    <div class="header-title">
+                        <h1>Marcos Alejandro<br>Fernandez Piñero</h1>
+                        <p class="tagline" data-i18n="tagline">Ingeniero Informático — Backend · Product Owner · IA Agéntica Empresarial</p>
+                        <p class="header-meta"><span id="edad-marcos" data-i18n="edad">—</span></p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/marcos-alejandro-fern%C3%A1ndez-pi%C3%B1ero-940293282/" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://github.com/Marcos020912" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             <div class="contact-info">
-                <div>📧 maalfepi@gmail.com</div>
-                <div>📱 +53 56233950</div>
-                <div>📍 La Habana, Cuba</div>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/marcos-alejandro-fern%C3%A1ndez-pi%C3%B1ero-940293282/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Marcos020912" target="_blank">GitHub</a>
+                <div class="chip">📧 <a href="mailto:maalfepi@gmail.com">maalfepi@gmail.com</a></div>
+                <div class="chip">📱 <a href="tel:+5554999525525">+55 54 999 525 525</a></div>
+                <div class="chip">📍 <span data-i18n="loc">Passo Fundo, RS — Brasil</span></div>
             </div>
         </header>
 
-        <section id="about">
-            <h2>Información General</h2>
-            <div class="about-content">
-                <p><strong>Nombre:</strong> Marcos Alejandro Fernández Piñero<br><span id="edad-marcos"></span>
+        <!-- ============ BODY ============ -->
+        <div class="body">
 
-<script>
-    (function() {
-        const fechaNacimiento = new Date(2002, 8, 12); // Mes 8 es Septiembre en JS
-        const hoy = new Date();
-        let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-        const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+            <!-- ---------- MAIN ---------- -->
+            <main class="main">
 
-        // Si no ha llegado su mes, o es su mes pero no ha llegado el día, restamos 1
-        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
-            edad--;
-        }
-document.getElementById('edad-marcos').innerHTML = "<strong>Edad:</strong> " + edad;
-    })();
-</script>
- <br><strong>Especialidad:</strong> Ingeniero informático<br>Soy un apasionado por la tecnología y el desarrollo de soluciones innovadoras en el área de Backend y Data Engineering. Busco oportunidades para aplicar mis conocimientos en el desarrollo de sistemas robustos y soluciones de manejo de datos. Interesado en profundizar en minería de datos y tecnologías avanzadas de procesamiento de información. Mi objetivo inmediato es adquirir experiencia laboral en el campo de la ingeniería de datos y posteriormente especializarme en minería de datos.</p>
+                <section id="about">
+                    <h2><span class="idx">01</span><span data-i18n="h2.about">Información General</span></h2>
+                    <div class="about-content">
+                        <p data-i18n="about.intro">
+                            Desarrollador con perfil multi-rol centrado en tres áreas complementarias:
+                            <strong>Backend</strong>, <strong>Product Owner</strong> e
+                            <strong>implementación de sistemas de IA agéntica en entornos empresariales</strong>.
+                        </p>
+                        <div class="role-list">
+                            <div class="role" data-i18n="role.backend">
+                                <b>Backend Development</b>
+                                Diseño y construyo APIs y sistemas robustos (Java, Spring Boot, Python, Go),
+                                con foco en seguridad, rendimiento, versionado y pruebas.
+                            </div>
+                            <div class="role" data-i18n="role.po">
+                                <b>Product Owner</b>
+                                Creo prototipos de aplicaciones para validarlas con usuarios y stakeholders
+                                antes de invertir en el desarrollo completo: de la idea al producto validado.
+                            </div>
+                            <div class="role" data-i18n="role.ai">
+                                <b>IA Agéntica en Entornos Empresariales</b>
+                                Implemento sistemas de IA en procesos reales de negocio: flujos agénticos,
+                                sistemas RAG, servidores MCP y skills que integran LLMs en la empresa.
+                            </div>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-card highlight">
+                                <span class="info-label" data-i18n="lbl.availability">Disponibilidad</span>
+                                <span class="info-value" data-i18n="val.availability">Abierto a oportunidades presenciales o remotas</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <div class="availability">
-                    <strong>Disponibilidad:</strong> Abierto a oportunidades presenciales o remotas
-                </div>
+                <section id="education">
+                    <h2><span class="idx">02</span><span data-i18n="h2.education">Educación</span></h2>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3 class="degree" data-i18n="edu.degree">Ingeniería Informática</h3>
+                                    <span class="date">2025</span>
+                                </div>
+                                <div class="institution" data-i18n="edu.institution">CUJAE — Universidad Tecnológica de la Habana José Antonio Echeverría</div>
+                                <p data-i18n="edu.desc">Especialización en desarrollo de software y sistemas informáticos con
+                                enfoque en tecnologías backend y manejo de datos. Participación en
+                                proyectos reales con empresas cubanas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <div class="interests">
-                    <strong>Intereses:</strong>
-                    Backend Development, Data Engineering, Minería de Datos, Prompt Engineering y LLMs
-                </div>
+                <section id="experience">
+                    <h2><span class="idx">03</span><span data-i18n="h2.experience">Experiencia Laboral</span></h2>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3 data-i18n="exp.citmatel.title">Proyecto de Tesis — Data Lake</h3>
+                                    <span class="date" data-i18n="date.citmatel">Oct 2025 – Jul 2026</span>
+                                </div>
+                                <div class="company">CITMATEL</div>
+                                <p data-i18n="exp.citmatel.desc">Trabajo realizado como <strong>proyecto de tesis de grado</strong>:
+                                creación de un Data Lake para la empresa CITMATEL, con manejo de
+                                grandes volúmenes de datos y metodología Scrum.</p>
+                            </div>
+                        </div>
 
-            </div>
-        </section>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3 data-i18n="exp.mm.title">Varios roles tecnológicos</h3>
+                                    <span class="date" data-i18n="date.mm">2023 – Oct 2026</span>
+                                </div>
+                                <div class="company">M&amp;M Marketing and Advertising Services</div>
+                                <ul class="bullets">
+                                    <li data-i18n="exp.mm.b1">Operador de CRM (GoHighLevel)</li>
+                                    <li data-i18n="exp.mm.b2">Creación de webs corporativas básicas</li>
+                                    <li data-i18n="exp.mm.b3">Implementación de chatbots y voicebots</li>
+                                    <li data-i18n="exp.mm.b4">2026: desarrollo de la plataforma Health Care Solution
+                                        (pacientes, formularios y citas), pipeline de oportunidades
+                                        de ventas, automatizaciones con GHL/Freedcamp, herramientas
+                                        internas con IA (MCP) y producción de contenido para redes
+                                        sociales.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Lenguajes de Programación</h3>
-                    <ul class="skill-list">
-                        <li>Java (Nivel medio)</li>
-                        <li>JavaScript (Nivel básico)</li>
-                        <li>TypeScript (Nivel básico)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks y Tecnologías</h3>
-                    <ul class="skill-list">
-                        <li>Spring Boot</li>
-                        <li>Node.js</li>
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>CouchDB</li>
-                        <li>Apache NiFi</li>
-                        <li>Metabase</li>
-                        <li>Docker (Nivel básico)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Herramientas y Metodologías</h3>
-                    <ul class="skill-list">
-                        <li>Git/GitHub</li>
-                        <li>Scrum</li>
-                        <li>Kanban</li>
-                        <li>Modelos de Lenguaje (LLM)</li>
-                        <li>Prompt Engineering</li>
-                        <li>Windows</li>
-                        <li>Linux</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Especializaciones</h3>
-                    <ul class="skill-list">
-                        <li>Backend Development</li>
-                        <li>Data Engineering</li>
-                        <li>Minería de Datos (Interés académico)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3 data-i18n="exp.mes.title">Repositorio Científico y Centro de Certificados</h3>
+                                    <span class="date" data-i18n="date.mes">Sep 2025 – Ago 2026</span>
+                                </div>
+                                <div class="company" data-i18n="exp.mes.company">Ministerio de Educación Superior (MES) — Pasantía profesional</div>
+                                <p data-i18n="exp.mes.desc">Desarrollo de dos proyectos para el MES: el <strong>repositorio
+                                científico</strong> (microservicio Java/Spring Boot para gestionar
+                                metadatos y contenidos de investigación) y el <strong>centro de
+                                certificados</strong> (aplicación web para buscar, descargar y
+                                administrar certificados PDF de obras académicas).</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <section id="experience">
-            <h2>Experiencia Laboral</h2>
-            <div class="experience-item">
-                <h3 class="job-title">Participación en Proyecto de Data Lake</h3>
-                <div class="company">CITMATEL</div>
-                <div class="date">Durante estudios universitarios</div>
-                <p>Participación activa en la creación de un Data Lake para la empresa CITMATEL. Aplicación de conocimientos en manejo de grandes volúmenes de datos y tecnologías de procesamiento. Utilización de metodologías ágiles Scrum para la gestión del proyecto.</p>
-            </div>
-        </section>
+                    <h3 class="group-title" data-i18n="grp.independent">Trabajos Independientes</h3>
 
-        <section id="education">
-            <h2>Educación</h2>
-            <div class="education-item">
-                <h3 class="degree">Ingeniería Informática</h3>
-                <div class="institution">CUJAE (Universidad Tecnológica de la Habana José Antonio Echeverría)</div>
-                <div class="date">2025</div>
-                <p>Especialización en desarrollo de software y sistemas informáticos con enfoque en tecnologías backend y manejo de datos. Participación en proyectos reales con empresas cubanas.</p>
-            </div>
-        </section>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3 data-i18n="exp.ve.title">Ventas Express — app móvil de ventas offline</h3>
+                                    <span class="date" data-i18n="date.present">2026 – Actual</span>
+                                </div>
+                                <div class="company" data-i18n="exp.ve.company">Proyecto independiente</div>
+                                <p data-i18n="exp.ve.intro">Aplicación móvil (APK Android) para la <strong>gestión de ventas en
+                                tiendas físicas en entornos de total desconexión</strong>, como Cuba:
+                                funciona 100% offline, sin backend ni internet, con toda la información
+                                persistida en el dispositivo.</p>
+                                <ul class="bullets">
+                                    <li data-i18n="exp.ve.b1">POS con escáner de código de barras, factura y cobro mixto
+                                        (efectivo + transferencia)</li>
+                                    <li data-i18n="exp.ve.b2">Caja con apertura/cierre en 3 etapas y conciliación de dinero
+                                        y mercancía; inventario de tienda y almacén</li>
+                                    <li data-i18n="exp.ve.b3">Licenciamiento por planes con códigos cifrados y firma HMAC
+                                        verificada offline</li>
+                                    <li data-i18n="exp.ve.b4">Intercambio de datos entre dispositivos por exportación e
+                                        importación de archivos con integridad</li>
+                                    <li data-i18n="exp.ve.b5">Stack: Flutter/Dart, SQLite local y <em>mobile_scanner</em>;
+                                        suite de pruebas <em>flutter test</em> en verde</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="projects">
-            <h2>Proyectos Destacados</h2>
-            <div class="project-item">
-                <h3 class="project-title">Data Lake para CITMATEL</h3>
-                <div class="date">Durante carrera universitaria</div>
-            </div>
-        </section>
+                <section id="projects">
+                    <h2><span class="idx">04</span><span data-i18n="h2.projects">Proyectos Destacados</span></h2>
+                    <div class="project-item featured">
+                        <div class="tl-head">
+                            <h3 class="project-title" data-i18n="proj.hcs.title">Health Care Solution — Plataforma de gestión clínica</h3>
+                            <span class="date" data-i18n="date.present">2026 – Actual</span>
+                        </div>
+                        <p class="project-sub" data-i18n="proj.hcs.sub">Proyecto creado íntegramente por mí — de la idea al
+                        lanzamiento inicial — con apoyo de <strong>inteligencia artificial</strong>
+                        para el prototipado rápido y toda la parte técnica de la plataforma.</p>
+                        <ul class="bullets">
+                            <li data-i18n="proj.hcs.b1"><strong>Monorepo</strong> (pnpm + Turborepo): frontend, backend y
+                                analítica en un único repositorio con entorno de desarrollo unificado</li>
+                            <li data-i18n="proj.hcs.b2"><strong>Frontend Next.js</strong> y <strong>backend NestJS</strong>
+                                con API REST sobre <strong>PostgreSQL</strong></li>
+                            <li data-i18n="proj.hcs.b3">Arquitectura de <strong>microkernel con complementos (plugins)</strong>:
+                                núcleo estable y módulos que se activan por organización</li>
+                            <li data-i18n="proj.hcs.b4">Trabajadores automáticos en segundo plano y módulos analíticos
+                                independientes</li>
+                            <li data-i18n="proj.hcs.b5"><strong>Docker Compose</strong> para el entorno local; validación con
+                                TypeScript estricto y pruebas con <strong>Vitest</strong></li>
+                            <li data-i18n="proj.hcs.b6">Seguridad por diseño: secretos y datos fuera de Git, configuración
+                                privada y plan de despliegue en <strong>Google Cloud</strong></li>
+                            <li data-i18n="proj.hcs.b7">Prototipado y arranque inicial acelerados con IA como copiloto:
+                                del concepto validado a la versión 0.11</li>
+                        </ul>
+                        <div class="stack-line">
+                            <span class="stack-chip">Next.js</span>
+                            <span class="stack-chip">NestJS</span>
+                            <span class="stack-chip">TypeScript</span>
+                            <span class="stack-chip">PostgreSQL</span>
+                            <span class="stack-chip">Docker</span>
+                            <span class="stack-chip">pnpm · Turborepo</span>
+                            <span class="stack-chip">Google Cloud</span>
+                            <span class="stack-chip" data-i18n="proj.hcs.ai">IA · Prototipado</span>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- ---------- SIDEBAR ---------- -->
+            <aside class="side">
+
+                <section id="skills">
+                    <h2 data-i18n="h2.skills">Habilidades</h2>
+
+                    <div class="skill-category">
+                        <h3 data-i18n="sk.langs">Lenguajes de Programación</h3>
+                        <div class="bar-skill">
+                            <div class="bar-label"><span>Java</span><span data-i18n="lvl.medium">Medio</span></div>
+                            <div class="bar"><i style="width:65%"></i></div>
+                        </div>
+                        <div class="bar-skill">
+                            <div class="bar-label"><span>Python</span><span data-i18n="lvl.medium">Medio</span></div>
+                            <div class="bar"><i style="width:65%"></i></div>
+                        </div>
+                        <div class="bar-skill">
+                            <div class="bar-label"><span>JavaScript</span><span data-i18n="lvl.basic">Básico</span></div>
+                            <div class="bar"><i style="width:40%"></i></div>
+                        </div>
+                        <div class="bar-skill">
+                            <div class="bar-label"><span>TypeScript</span><span data-i18n="lvl.basic">Básico</span></div>
+                            <div class="bar"><i style="width:35%"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 data-i18n="sk.frameworks">Frameworks y Tecnologías</h3>
+                        <div class="tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">CouchDB</span>
+                            <span class="tag">Apache NiFi</span>
+                            <span class="tag">Metabase</span>
+                            <span class="tag" data-i18n="docker.basic">Docker — Básico</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 data-i18n="sk.tools">Herramientas y Metodologías</h3>
+                        <div class="tags">
+                            <span class="tag">Git / GitHub</span>
+                            <span class="tag">Scrum</span>
+                            <span class="tag">Kanban</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Prompt Engineering</span>
+                            <span class="tag">Windows</span>
+                            <span class="tag">Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 data-i18n="sk.specs">Especializaciones</h3>
+                        <div class="tags">
+                            <span class="tag accent">Backend Development</span>
+                            <span class="tag accent" data-i18n="spec.po">Product Owner · Prototipado de Apps</span>
+                            <span class="tag accent" data-i18n="spec.ai">IA Agéntica en Entornos Empresariales</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="languages">
+                    <h2 data-i18n="h2.languages">Idiomas</h2>
+                    <div class="lang-list">
+                        <div class="langrow">
+                            <span class="name" data-i18n="lang.es">Español</span>
+                            <span class="level native" data-i18n="lang.es.level">Nativo</span>
+                        </div>
+                        <div class="langrow">
+                            <span class="name" data-i18n="lang.en">Inglés</span>
+                            <span class="level" data-i18n="lang.en.level">Básico</span>
+                        </div>
+                        <div class="langrow">
+                            <span class="name" data-i18n="lang.pt">Portugués</span>
+                            <span class="level" data-i18n="lang.pt.level">Mínimo</span>
+                        </div>
+                    </div>
+                </section>
+
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <span>Marcos Alejandro Fernandez Piñero</span>
+            <span>maalfepi@gmail.com</span>
+        </footer>
     </div>
-</body>
 
+    <script src="i18n.js"></script>
+</body>
 </html>
